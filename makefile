@@ -15,3 +15,7 @@ $(BUILD)/%.txt: src/c/%.c
 $(BUILD)/%.json: src/c/%.c
 	mkdir -p $(BUILD)
 	clang -D RUNTIME_GENERATION=1 $(CFLAGS) -o $(shell mktemp).o -c $< -Xclang -ast-dump=json > $@
+
+
+hello:
+	gcc -shared -o libs/libhello.so -fPIC src/c/hello.c
