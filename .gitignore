@@ -1,0 +1,4 @@
+.cpcache
+.shadow-cljs
+.lsp
+.clj-kondo/*
